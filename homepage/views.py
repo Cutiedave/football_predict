@@ -58,7 +58,7 @@ def predict(requests):
             rteam=requests.POST['teamh']
         elif res=='AWAY WINS':
             rteam=requests.POST['teama']
-        elif res=='AWAY WINS':
+        else:
             rteam='NO WINNER'
         return render(requests, 'prediction_result.html',{'result':res,'team':rteam})
 
@@ -66,10 +66,13 @@ def predict(requests):
         return render(requests, 'prediction.html',{'teams':teams})
 
 def nav(requests):
-    if requests.POST['options']=='2':
-        return redirect('/predict')
-    elif requests.POST['options']=='1':
-        return HttpResponse('only EPL is available at this point in time')
+    if requests.method=='POST':
+        if requests.POST['options']=='2':
+            return redirect('/predict')
+        elif requests.POST['options']=='1':
+            return HttpResponse('only EPL is available at this point in time')
+        else:
+            return HttpResponse('My name is KING and i believe Messi is the greatest player of all time')
     else:
         return HttpResponse('My name is KING and i believe Messi is the greatest player of all time')
 
