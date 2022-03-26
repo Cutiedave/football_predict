@@ -14,7 +14,7 @@ def homepage(requests):
 
 def getPredictions(sample):
     import pickle
-    model = pickle.load(open(os.getcwd()+'\\football_model.sav', "rb"))
+    model = pickle.load(open(os.getcwd()+'/football_model.sav', "rb"))
     prediction = model.predict(np.array(sample).reshape(1, -1))
     
     if prediction == 'A':
