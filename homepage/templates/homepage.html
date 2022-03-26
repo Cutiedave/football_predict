@@ -45,8 +45,8 @@
                         <div class="row align-items-center">
                             <div class="col-xl-2 col-lg-2">
                                 <div class="logo">
-                                    <a href="index.html">
-                                        <img src="{% static 'img/betlogo.png' %}" alt="">
+                                    <a href="/">
+                                        <img src="{% static 'img/belogo.png' %}" alt="">
                                     </a>
                                 </div>
                             </div>
@@ -54,7 +54,7 @@
                                 <div class="main-menu  d-none d-lg-block">
                                     <nav>
                                         <ul id="navigation">
-                                            <li><a class="active" href="index.html">home</a></li>
+                                            <li><a class="active" href="/">home</a></li>
                                             {% if user.is_authenticated %}
                                             <li><a class="" href="predict">check pediction</a></li>
                                             {% endif %}
