@@ -23,7 +23,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-2)$1@b6xa1i+63es1aix_yga&gk6#7bhs(#$-^b=3s9ky*)n-q'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 #ALLOWED_HOSTS = []
 ALLOWED_HOSTS = ['king-predict.herokuapp.com','127.0.0.1','localhost']
