@@ -23,7 +23,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-2)$1@b6xa1i+63es1aix_yga&gk6#7bhs(#$-^b=3s9ky*)n-q'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 #ALLOWED_HOSTS = []
 ALLOWED_HOSTS = ['king-predict.herokuapp.com','127.0.0.1','localhost']
@@ -43,6 +43,7 @@ INSTALLED_APPS = [
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -131,8 +132,8 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.0/howto/static-files/
 
-STATIC_URL = 'static/'
-#STATICFILES_DIR=os.path.join(BASE_DIR,'travelo-master/')
+STATIC_URL = '/static/'
+STATICFILES_DIR=os.path.join(BASE_DIR,'static')
 STATIC_ROOT =os.path.join(BASE_DIR, 'static')
 
 # Default primary key field type
